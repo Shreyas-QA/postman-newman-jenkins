@@ -1,0 +1,171 @@
+{
+	"info": {
+		"_postman_id": "1c4747de-844f-41b4-ab39-413f208484a6",
+		"name": "DemoApis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "pm_login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Validating successful response message.\r",
+							"pm.test(\"Body matches string\", function() {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Login Successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-length": true,
+					"user-agent": true,
+					"accept": true,
+					"accept-encoding": true,
+					"connection": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/login?email=pm@explore.com&password=Password@123",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "pm@explore.com"
+						},
+						{
+							"key": "password",
+							"value": "Password@123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "staff_login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Validating successful response message.\r",
+							"pm.test(\"Body matches string\", function() {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Login Successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/login?email=nirav.patel@jeavio.com&password=Niravpatel@152",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "nirav.patel@jeavio.com"
+						},
+						{
+							"key": "password",
+							"value": "Niravpatel@152"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resident",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//Validating successful response message.\r",
+							"pm.test(\"Body matches string\", function() {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Login Successfully\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/login?email=niravpatel5653@gmail.com&password=Niravpatel@152",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "niravpatel5653@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "Niravpatel@152"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://staging.risebuildings.com",
+			"type": "string"
+		}
+	]
+}

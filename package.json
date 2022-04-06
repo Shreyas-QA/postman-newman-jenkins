@@ -1,0 +1,14 @@
+{
+  "name": "postman_jenkins_integration",
+  "version": "1.0.0",
+  "description": "Project for storing Postman Tests",
+  "main": "index.js",
+  "scripts": {
+    "api-tests-staging": "newman run Tests/DemoApis.postman_collection.json"
+  },
+  "author": "Shreyas Sambare",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^5.3.2"
+  }
+}
