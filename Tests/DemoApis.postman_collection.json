@@ -38,7 +38,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/api/login?email=pm@explore.com&password=Password@123",
+					"raw": "{{url}}/api/login?email={{pm_email}}&password={{pm_password}}",
 					"host": [
 						"{{url}}"
 					],
@@ -49,11 +49,11 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "pm@explore.com"
+							"value": "{{pm_email}}"
 						},
 						{
 							"key": "password",
-							"value": "Password@123"
+							"value": "{{pm_password}}"
 						}
 					]
 				}
