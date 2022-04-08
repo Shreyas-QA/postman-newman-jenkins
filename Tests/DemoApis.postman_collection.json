@@ -139,7 +139,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/api/login?email=niravpatel5653@gmail.com&password=Niravpatel@152",
+					"raw": "{{url}}/api/login?email={{Resident_email}}&password={{Resident_password}}",
 					"host": [
 						"{{url}}"
 					],
@@ -150,11 +150,11 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "niravpatel5653@gmail.com"
+							"value": "{{Resident_email}}"
 						},
 						{
 							"key": "password",
-							"value": "Niravpatel@152"
+							"value": "{{Resident_password}}"
 						}
 					]
 				}
@@ -205,6 +205,16 @@
 		},
 		{
 			"key": "staff_password",
+			"value": "Niravpatel@152",
+			"type": "string"
+		},
+		{
+			"key": "Resident_email",
+			"value": "niravpatel5653@gmail.com",
+			"type": "string"
+		},
+		{
+			"key": "Resident_password",
 			"value": "Niravpatel@152",
 			"type": "string"
 		}
