@@ -93,7 +93,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "{{url}}/api/login?email=nirav.patel@jeavio.com&password=Niravpatel@152",
+					"raw": "{{url}}/api/login?email={{staff_email}}&password={{staff_password}}",
 					"host": [
 						"{{url}}"
 					],
@@ -104,11 +104,11 @@
 					"query": [
 						{
 							"key": "email",
-							"value": "nirav.patel@jeavio.com"
+							"value": "{{staff_email}}"
 						},
 						{
 							"key": "password",
-							"value": "Niravpatel@152"
+							"value": "{{staff_password}}"
 						}
 					]
 				}
@@ -196,6 +196,16 @@
 		{
 			"key": "pm_password",
 			"value": "Password@123",
+			"type": "string"
+		},
+		{
+			"key": "staff_email",
+			"value": "nirav.patel@jeavio.com",
+			"type": "string"
+		},
+		{
+			"key": "staff_password",
+			"value": "Niravpatel@152",
 			"type": "string"
 		}
 	]
