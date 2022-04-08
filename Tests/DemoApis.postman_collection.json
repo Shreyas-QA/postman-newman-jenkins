@@ -12,6 +12,13 @@
 					"listen": "test",
 					"script": {
 						"exec": [
+							"\r",
+							"//Fetching PM user token and Id from the response\r",
+							"var jsonData = JSON.parse(responseBody);\r",
+							"pm.globals.set(\"pm_token\", jsonData.data.token);\r",
+							"pm.globals.set(\"pm_id\", jsonData.data.user_id);\r",
+							"\r",
+							"\r",
 							"//Validating successful response message.\r",
 							"pm.test(\"Body matches string\", function() {\r",
 							"    pm.expect(pm.response.text()).to.include(\"Login Successfully\");\r",
